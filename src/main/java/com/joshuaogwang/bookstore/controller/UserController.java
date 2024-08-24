@@ -1,6 +1,6 @@
 package com.joshuaogwang.bookstore.controller;
 
-import com.joshuaogwang.bookstore.UserService;
+import com.joshuaogwang.bookstore.service.UserService;
 import com.joshuaogwang.bookstore.dto.ChangePasswordRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

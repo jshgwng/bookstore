@@ -1,4 +1,4 @@
-package com.joshuaogwang.bookstore;
+package com.joshuaogwang.bookstore.service;
 
 import com.joshuaogwang.bookstore.dto.ChangePasswordRequest;
 import com.joshuaogwang.bookstore.entity.User;
