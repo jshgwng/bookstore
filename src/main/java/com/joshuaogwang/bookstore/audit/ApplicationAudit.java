@@ -1,5 +1,6 @@
 package com.joshuaogwang.bookstore.audit;
 
+import com.joshuaogwang.bookstore.entity.User;
 import lombok.extern.java.Log;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -15,5 +16,7 @@ public class ApplicationAudit implements AuditorAware<Long> {
         if (authentication == null || !authentication.isAuthenticated() || authentication instanceof AnonymousAuthenticationToken) {
             return Optional.empty();
         }
+        User user = (User) authentication.getPrincipal();
+        return Optional.ofNullable(user.getId());
     }
 }
